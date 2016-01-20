@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		305991B21C5024ED00A79A45 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 305991B11C5024ED00A79A45 /* PictureCollectionViewCell.m */; };
 		DB407DCE1C501C5800F86A7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB407DCD1C501C5800F86A7C /* main.m */; };
 		DB407DD11C501C5800F86A7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB407DD01C501C5800F86A7C /* AppDelegate.m */; };
 		DB407DD41C501C5800F86A7C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB407DD31C501C5800F86A7C /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		305991B01C5024ED00A79A45 /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
+		305991B11C5024ED00A79A45 /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
 		DB407DC91C501C5800F86A7C /* HallOfFrames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HallOfFrames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB407DCD1C501C5800F86A7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB407DCF1C501C5800F86A7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				DB407DD01C501C5800F86A7C /* AppDelegate.m */,
 				DB407DD21C501C5800F86A7C /* ViewController.h */,
 				DB407DD31C501C5800F86A7C /* ViewController.m */,
+				305991B01C5024ED00A79A45 /* PictureCollectionViewCell.h */,
+				305991B11C5024ED00A79A45 /* PictureCollectionViewCell.m */,
 				DB407DD51C501C5800F86A7C /* Main.storyboard */,
 				DB407DD81C501C5800F86A7C /* Assets.xcassets */,
 				DB407DDA1C501C5800F86A7C /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB407DD41C501C5800F86A7C /* ViewController.m in Sources */,
+				305991B21C5024ED00A79A45 /* PictureCollectionViewCell.m in Sources */,
 				DB407DD11C501C5800F86A7C /* AppDelegate.m in Sources */,
 				DB407DCE1C501C5800F86A7C /* main.m in Sources */,
 			);
@@ -299,6 +305,7 @@
 				DB407DE21C501C5900F86A7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

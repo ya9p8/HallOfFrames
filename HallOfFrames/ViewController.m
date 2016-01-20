@@ -7,11 +7,14 @@
 //
 
 #import "ViewController.h"
-
+#import "PictureCollectionViewCell.h"
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
-
-
-
+@property PictureCollectionViewCell *pic1;
+@property PictureCollectionViewCell *pic2;
+@property PictureCollectionViewCell *pic3;
+@property PictureCollectionViewCell *pic4;
+@property PictureCollectionViewCell *pic5;
+@property NSMutableArray *picCollection;
 @end
 
 @implementation ViewController
@@ -19,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.picCollection = [NSMutableArray arrayWithObjects:self.pic1, self.pic2, self.pic3, self.pic4, self.pic5, nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +41,6 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    return self.picCollection.count;
 }
 @end
