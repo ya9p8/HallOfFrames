@@ -12,6 +12,7 @@
 #import "CustomizationView.h"
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, CustomizationViewProtocol>
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property NSMutableArray *picCollection;
 @end
 
@@ -27,6 +28,12 @@
     Picture* picture5 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage5"] AndFrameColor:[UIColor orangeColor]];
     
     self.picCollection = [NSMutableArray arrayWithObjects:picture1, picture2, picture3, picture4, picture5, nil];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    
+    [self.collectionView reloadData];
     
 }
 
@@ -59,14 +66,26 @@
 
 }
 
--(void)customizationViewCell:(PictureCollectionViewCell*)cell didTapButton:(UIButton *)button {
-    if ([button.titleLabel.text isEqualToString:@"Yellow"]) {
+-(void)didTapButton:(UIButton *)button
+{
+    NSLog(@"Entered didTapButton");
+    
+    NSIndexPath* index = [self.collectionView.indexPathsForSelectedItems objectAtIndex:0];
+    
+    UICollectionViewCell* cell = [self.collectionView cellForItemAtIndexPath:index];
+    
+    if ([button.titleLabel.text isEqualToString:@"Yellow"])
+    {
         cell.backgroundColor = [UIColor yellowColor];
-    }else if ([button.titleLabel.text isEqualToString:@"Purple"]) {
+    }else if ([button.titleLabel.text isEqualToString:@"Purple"])
+    {
         cell.backgroundColor = [UIColor purpleColor];
-    }else if ([button.titleLabel.text isEqualToString:@"Green"]) {
+    }else if ([button.titleLabel.text isEqualToString:@"Green"])
+    {
         cell.backgroundColor = [UIColor greenColor];
     }
+
+    
 }
 
 

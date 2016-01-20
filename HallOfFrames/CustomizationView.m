@@ -11,6 +11,7 @@
 @implementation CustomizationView
 
 
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -19,9 +20,9 @@
 }
 */
 
-- (IBAction)didTapButton:(UIButton *)sender {
-    [self.delegate customizationViewCell:self didTapButton:sender];
-    
+- (IBAction)onColorButtonTapped:(UIButton *)sender {
+    [self.delegate didTapButton:sender];
+    //[self.view setHidden:YES];
 }
 
 

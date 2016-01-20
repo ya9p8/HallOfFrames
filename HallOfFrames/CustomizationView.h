@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PictureCollectionViewCell.h"
 
 @protocol CustomizationViewProtocol <NSObject>
 
--(void) customizationViewCell:(id)cell didTapButton:(UIButton*) button;
+-(void)didTapButton:(UIButton*) button;
 
 
 @end
