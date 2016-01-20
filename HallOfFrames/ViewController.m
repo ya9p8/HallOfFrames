@@ -9,7 +9,8 @@
 #import "ViewController.h"
 #import "Picture.h"
 #import "PictureCollectionViewCell.h"
-@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+#import "CustomizationView.h"
+@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, CustomizationViewProtocol>
 
 @property NSMutableArray *picCollection;
 @end
@@ -27,7 +28,6 @@
     
     self.picCollection = [NSMutableArray arrayWithObjects:picture1, picture2, picture3, picture4, picture5, nil];
     
-    [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,4 +51,28 @@
 {
     return self.picCollection.count;
 }
+
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UIView *customizationView = [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
+    [self.view addSubview:customizationView];
+
+}
+
+-(void)customizationViewCell:(PictureCollectionViewCell*)cell didTapButton:(UIButton *)button {
+    if ([button.titleLabel.text isEqualToString:@"Yellow"]) {
+        cell.backgroundColor = [UIColor yellowColor];
+    }else if ([button.titleLabel.text isEqualToString:@"Purple"]) {
+        cell.backgroundColor = [UIColor purpleColor];
+    }else if ([button.titleLabel.text isEqualToString:@"Green"]) {
+        cell.backgroundColor = [UIColor greenColor];
+    }
+}
+
+
+
+
+
+
+
 @end

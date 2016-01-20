@@ -26,9 +26,6 @@
                         <constraint firstAttribute="height" constant="30" id="iBy-kI-jzZ"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="onFrameColorButtonChanged:" destination="iN0-l3-epB" eventType="touchUpInside" id="v7Y-PC-nBn"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V98-VF-jBc">
                     <rect key="frame" x="148" y="285" width="46" height="30"/>
@@ -37,6 +34,9 @@
                         <constraint firstAttribute="height" constant="30" id="wl2-aw-6nu"/>
                     </constraints>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didTapButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="cNs-bD-atA"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

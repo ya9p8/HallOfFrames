@@ -19,10 +19,11 @@
 }
 */
 
-
-- (IBAction)onFrameColorButtonChanged:(UIButton *)sender {
-    
+- (IBAction)didTapButton:(UIButton *)sender {
+    [self.delegate customizationViewCell:self didTapButton:sender];
     
 }
+
+
 
 @end
