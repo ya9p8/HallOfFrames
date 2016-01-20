@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol CustomizationViewProtocol <NSObject>
+@protocol CustomizationViewDelegate <NSObject>
 
 -(void)didTapButton:(UIButton*) button;
 
@@ -17,7 +17,7 @@
 
 @interface CustomizationView : UIView
 
-@property (nonatomic, assign) id <CustomizationViewProtocol> delegate;
+@property (nonatomic, assign) id <CustomizationViewDelegate> delegate;
 
 
 @end

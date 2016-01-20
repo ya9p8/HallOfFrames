@@ -22,6 +22,16 @@
                         <action selector="onColorButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="a5O-2r-AgY"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tw8-iW-May" userLabel="Purple">
+                    <rect key="frame" x="387" y="285" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="OVg-g6-idl"/>
+                    </constraints>
+                    <state key="normal" title="Purple"/>
+                    <connections>
+                        <action selector="onColorButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="y4P-y3-pbk"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V98-VF-jBc" userLabel="Yellow">
                     <rect key="frame" x="148" y="285" width="46" height="30"/>
                     <constraints>
@@ -33,21 +43,13 @@
                         <action selector="onColorButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="1aT-FW-w6V"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tw8-iW-May" userLabel="Purple">
-                    <rect key="frame" x="387" y="285" width="46" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="46" id="OVg-g6-idl"/>
-                    </constraints>
-                    <state key="normal" title="Purple"/>
-                    <connections>
-                        <action selector="onColorButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="y4P-y3-pbk"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="5wP-sG-kTO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1c8-MI-t3k"/>
-                <constraint firstItem="V98-VF-jBc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="148" id="DSw-ar-WdE"/>
+                <constraint firstItem="V98-VF-jBc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="148" id="DSw-ar-WdE">
+                    <variation key="widthClass=compact" constant="80"/>
+                </constraint>
                 <constraint firstItem="Tw8-iW-May" firstAttribute="leading" secondItem="5wP-sG-kTO" secondAttribute="trailing" constant="64" id="UfU-oC-54d"/>
                 <constraint firstItem="Tw8-iW-May" firstAttribute="baseline" secondItem="5wP-sG-kTO" secondAttribute="baseline" id="XMd-LO-Juj"/>
                 <constraint firstItem="5wP-sG-kTO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aOS-G3-A6g"/>

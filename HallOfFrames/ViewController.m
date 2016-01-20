@@ -10,10 +10,11 @@
 #import "Picture.h"
 #import "PictureCollectionViewCell.h"
 #import "CustomizationView.h"
-@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, CustomizationViewProtocol>
+@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, CustomizationViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property NSMutableArray *picCollection;
+@property CustomizationView * customizationView;
 @end
 
 @implementation ViewController
@@ -28,6 +29,7 @@
     Picture* picture5 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage5"] AndFrameColor:[UIColor orangeColor]];
     
     self.picCollection = [NSMutableArray arrayWithObjects:picture1, picture2, picture3, picture4, picture5, nil];
+    
     
 }
 
@@ -61,14 +63,18 @@
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    UIView *customizationView = [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
-    [self.view addSubview:customizationView];
+    self.customizationView = [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
+    
+    self.customizationView.delegate = self;
+    
+    [self.view addSubview:self.customizationView];
+
 
 }
 
 -(void)didTapButton:(UIButton *)button
 {
-    NSLog(@"Entered didTapButton");
+    //NSLog(@"Entered didTapButton");
     
     NSIndexPath* index = [self.collectionView.indexPathsForSelectedItems objectAtIndex:0];
     
@@ -84,6 +90,8 @@
     {
         cell.backgroundColor = [UIColor greenColor];
     }
+    
+    [self.customizationView setHidden:true];
 
     
 }
