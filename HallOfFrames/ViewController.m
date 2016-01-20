@@ -7,13 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "Picture.h"
 #import "PictureCollectionViewCell.h"
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
-@property PictureCollectionViewCell *pic1;
-@property PictureCollectionViewCell *pic2;
-@property PictureCollectionViewCell *pic3;
-@property PictureCollectionViewCell *pic4;
-@property PictureCollectionViewCell *pic5;
+
 @property NSMutableArray *picCollection;
 @end
 
@@ -22,8 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.picCollection = [NSMutableArray arrayWithObjects:self.pic1, self.pic2, self.pic3, self.pic4, self.pic5, nil];
+    Picture* picture1 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage1"] AndFrameColor:[UIColor blueColor]];
+    Picture* picture2 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage2"] AndFrameColor:[UIColor blueColor]];
+    Picture* picture3 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage3"] AndFrameColor:[UIColor blueColor]];
+    Picture* picture4 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage4"] AndFrameColor:[UIColor blueColor]];
+    Picture* picture5 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage5"] AndFrameColor:[UIColor blueColor]];
     
+    self.picCollection = [NSMutableArray arrayWithObjects:picture1, picture2, picture3, picture4, picture5, nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,8 +35,12 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    Picture* picture = [self.picCollection objectAtIndex:indexPath.row];
+    PictureCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCollectionViewCell" forIndexPath:indexPath];
     
-    UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCollectionViewCell" forIndexPath:indexPath];
+    cell.frameColor = picture.frameColor;
+    cell.image = picture.image;
+    
     return cell;
     
 }

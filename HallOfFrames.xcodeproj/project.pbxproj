@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		305991B21C5024ED00A79A45 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 305991B11C5024ED00A79A45 /* PictureCollectionViewCell.m */; };
 		DB407DCE1C501C5800F86A7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB407DCD1C501C5800F86A7C /* main.m */; };
 		DB407DD11C501C5800F86A7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB407DD01C501C5800F86A7C /* AppDelegate.m */; };
 		DB407DD41C501C5800F86A7C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB407DD31C501C5800F86A7C /* ViewController.m */; };
 		DB407DD71C501C5800F86A7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB407DD51C501C5800F86A7C /* Main.storyboard */; };
 		DB407DD91C501C5800F86A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB407DD81C501C5800F86A7C /* Assets.xcassets */; };
 		DB407DDC1C501C5800F86A7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB407DDA1C501C5800F86A7C /* LaunchScreen.storyboard */; };
+		DB407DEB1C5027DC00F86A7C /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = DB407DEA1C5027DC00F86A7C /* Picture.m */; };
+		DB407DF11C50302800F86A7C /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB407DF01C50302800F86A7C /* PictureCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		305991B01C5024ED00A79A45 /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
-		305991B11C5024ED00A79A45 /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
 		DB407DC91C501C5800F86A7C /* HallOfFrames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HallOfFrames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB407DCD1C501C5800F86A7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB407DCF1C501C5800F86A7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +28,10 @@
 		DB407DD81C501C5800F86A7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB407DDB1C501C5800F86A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB407DDD1C501C5800F86A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB407DE91C5027DC00F86A7C /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		DB407DEA1C5027DC00F86A7C /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		DB407DEF1C50302800F86A7C /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
+		DB407DF01C50302800F86A7C /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +68,11 @@
 				DB407DD01C501C5800F86A7C /* AppDelegate.m */,
 				DB407DD21C501C5800F86A7C /* ViewController.h */,
 				DB407DD31C501C5800F86A7C /* ViewController.m */,
-				305991B01C5024ED00A79A45 /* PictureCollectionViewCell.h */,
-				305991B11C5024ED00A79A45 /* PictureCollectionViewCell.m */,
+				DB407DE91C5027DC00F86A7C /* Picture.h */,
+				DB407DEA1C5027DC00F86A7C /* Picture.m */,
 				DB407DD51C501C5800F86A7C /* Main.storyboard */,
+				DB407DEF1C50302800F86A7C /* PictureCollectionViewCell.h */,
+				DB407DF01C50302800F86A7C /* PictureCollectionViewCell.m */,
 				DB407DD81C501C5800F86A7C /* Assets.xcassets */,
 				DB407DDA1C501C5800F86A7C /* LaunchScreen.storyboard */,
 				DB407DDD1C501C5800F86A7C /* Info.plist */,
@@ -155,8 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB407DEB1C5027DC00F86A7C /* Picture.m in Sources */,
+				DB407DF11C50302800F86A7C /* PictureCollectionViewCell.m in Sources */,
 				DB407DD41C501C5800F86A7C /* ViewController.m in Sources */,
-				305991B21C5024ED00A79A45 /* PictureCollectionViewCell.m in Sources */,
 				DB407DD11C501C5800F86A7C /* AppDelegate.m in Sources */,
 				DB407DCE1C501C5800F86A7C /* main.m in Sources */,
 			);
