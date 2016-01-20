@@ -47,6 +47,9 @@
                                             <constraint firstItem="voM-vC-UBp" firstAttribute="centerY" secondItem="tKf-Y3-O3g" secondAttribute="centerY" id="UJB-ih-1Ib"/>
                                             <constraint firstItem="voM-vC-UBp" firstAttribute="centerX" secondItem="tKf-Y3-O3g" secondAttribute="centerX" id="lgP-Fp-d0p"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="pictureImageView" destination="voM-vC-UBp" id="OBy-q7-S6d"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

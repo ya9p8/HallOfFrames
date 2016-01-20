@@ -20,12 +20,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     Picture* picture1 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage1"] AndFrameColor:[UIColor blueColor]];
-    Picture* picture2 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage2"] AndFrameColor:[UIColor blueColor]];
-    Picture* picture3 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage3"] AndFrameColor:[UIColor blueColor]];
-    Picture* picture4 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage4"] AndFrameColor:[UIColor blueColor]];
-    Picture* picture5 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage5"] AndFrameColor:[UIColor blueColor]];
+    Picture* picture2 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage2"] AndFrameColor:[UIColor redColor]];
+    Picture* picture3 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage3"] AndFrameColor:[UIColor greenColor]];
+    Picture* picture4 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage4"] AndFrameColor:[UIColor yellowColor]];
+    Picture* picture5 = [[Picture alloc]initWithImage:[UIImage imageNamed:@"universeimage5"] AndFrameColor:[UIColor orangeColor]];
     
     self.picCollection = [NSMutableArray arrayWithObjects:picture1, picture2, picture3, picture4, picture5, nil];
+    
+    [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,8 +40,8 @@
     Picture* picture = [self.picCollection objectAtIndex:indexPath.row];
     PictureCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCollectionViewCell" forIndexPath:indexPath];
     
-    cell.frameColor = picture.frameColor;
-    cell.image = picture.image;
+    cell.pictureImageView.image = picture.image;
+    cell.backgroundColor = picture.frameColor;
     
     return cell;
     
